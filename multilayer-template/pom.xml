@@ -16,6 +16,9 @@
 
 	<modules>
 		<module>multilayer-presentationlayer</module>
+		<module>multilayer-servicelayer</module>
+		<module>multilayer-businesslayer</module>
+		<module>multilayer-util</module>
 	</modules>
 
 	<build>
