@@ -1,0 +1,6 @@
+com\fnmps\java\template\multilayer\beans\LoginControllerBean.class
+com\fnmps\java\template\multilayer\beans\LoginBackingBean.class
+com\fnmps\java\template\multilayer\beans\ServiceBean.class
+com\fnmps\java\template\multilayer\beans\UserBean.class
+com\fnmps\java\template\multilayer\beans\UserRelationshipsControllerBean.class
+com\fnmps\java\template\multilayer\beans\UserRelationshipsBackingBean.class
