@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="authenticationFacade"
+		class="com.fnmps.java.template.multilayer.businesslayer.authentication.AuthenticationFacade"></bean>
+
+	<bean id="authenticationMapper"
+		class="com.fnmps.java.template.multilayer.util.MultiLayerMapper">
+		<constructor-arg>
+			<list>
+				<!-- TODO: Find a way to be able to put all mappers from a given package -->
+				<bean
+					class="com.fnmps.java.template.multilayer.businesslayer.authentication.mappers.User2UserOutMapper" />
+				<bean
+					class="com.fnmps.java.template.multilayer.businesslayer.authentication.mappers.UserIn2UserMapper" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+
+</beans>
