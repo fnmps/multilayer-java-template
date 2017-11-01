@@ -8,6 +8,7 @@ import org.modelmapper.PropertyMap;
 public class MultiLayerMapper extends ModelMapper{
 
 	public MultiLayerMapper(List<PropertyMap<?, ?>> mappers) throws InstantiationException, IllegalAccessException {
+		getConfiguration().setImplicitMappingEnabled(false);
 		for(PropertyMap<?, ?> mapper : mappers) {
 			super.addMappings(mapper);
 		}

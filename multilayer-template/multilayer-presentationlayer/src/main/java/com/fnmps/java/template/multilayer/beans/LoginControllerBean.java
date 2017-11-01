@@ -9,6 +9,7 @@ import javax.faces.view.ViewScoped;
 
 import com.fnmps.java.template.multilayer.servicelayer.authentication.exceptions.AuthenticationException;
 import com.fnmps.java.template.multilayer.servicelayer.authentication.model.UserIn;
+import com.fnmps.java.template.multilayer.servicelayer.authentication.model.UserOut;
 
 @ManagedBean
 @ViewScoped
@@ -34,16 +35,18 @@ public class LoginControllerBean implements Serializable {
 	}
 
 	public String actionLogin() {	
-		
+		UserOut userOut = null;
 		try {
-			UserIn user = new UserIn();
-			user.setUsername(loginBackingBean.getUsername());
-			serviceCatalog.getAuthenticationService().authenticate(user );
+			UserIn userIn = new UserIn();
+			userIn.setUsername(loginBackingBean.getUsername());
+			userOut = serviceCatalog.getAuthenticationService().authenticate(userIn );
 		} catch (AuthenticationException e) {
 			e.printStackTrace();
 		}
 		
-		userBean.setUsername(loginBackingBean.getUsername());		
+		userBean.setUsername(userOut.getUsername());
+		userBean.setName(userOut.getLastName() + ", " + userOut.getLastName());
+		
 		return "userRelationships.xhtml";
 	}
 

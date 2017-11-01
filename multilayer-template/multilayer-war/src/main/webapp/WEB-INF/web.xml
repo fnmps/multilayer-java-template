@@ -31,6 +31,7 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
+		classpath:dataContext.xml
 		classpath:businessContext.xml
 		classpath:servicesContext.xml
 		classpath:presentationContext.xml

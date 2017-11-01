@@ -14,6 +14,7 @@ public class UserBean implements Serializable {
 	 */
 	private static final long serialVersionUID = 8523685181617186419L;
 	private String username;
+	private String name;
 
 	public String getUsername() {
 		return username;
@@ -21,6 +22,14 @@ public class UserBean implements Serializable {
 
 	public void setUsername(String username) {
 		this.username = username;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }

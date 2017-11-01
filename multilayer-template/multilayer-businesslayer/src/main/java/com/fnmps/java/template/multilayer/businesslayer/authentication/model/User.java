@@ -3,7 +3,7 @@ package com.fnmps.java.template.multilayer.businesslayer.authentication.model;
 public class User {
 
 	private String username;
-	private String fistName;
+	private String firstName;
 	private String lastName;
 
 	public String getUsername() {
@@ -14,12 +14,12 @@ public class User {
 		this.username = username;
 	}
 
-	public String getFistName() {
-		return fistName;
+	public String getFirstName() {
+		return firstName;
 	}
 
 	public void setFistName(String fistName) {
-		this.fistName = fistName;
+		this.firstName = fistName;
 	}
 
 	public String getLastName() {

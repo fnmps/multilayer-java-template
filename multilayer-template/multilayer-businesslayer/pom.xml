@@ -19,6 +19,12 @@
 
 		<dependency>
 			<groupId>com.fnmps.java.template</groupId>
+			<artifactId>multilayer-dataaccesslayer</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fnmps.java.template</groupId>
 			<artifactId>multilayer-util</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
