@@ -2,10 +2,10 @@ package com.fnmps.java.template.multilayer.beans;
 
 import java.io.Serializable;
 
+import javax.faces.bean.ManagedBean;
 import javax.faces.view.ViewScoped;
-import javax.inject.Named;
 
-@Named
+@ManagedBean
 @ViewScoped
 public class LoginBackingBean  implements Serializable  {
 

@@ -2,10 +2,10 @@ package com.fnmps.java.template.multilayer.beans;
 
 import java.io.Serializable;
 
+import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.inject.Named;
 
-@Named
+@ManagedBean
 @SessionScoped
 public class UserBean implements Serializable {
 

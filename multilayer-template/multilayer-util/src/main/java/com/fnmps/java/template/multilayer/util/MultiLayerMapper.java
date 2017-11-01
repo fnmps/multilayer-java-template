@@ -7,9 +7,9 @@ import org.modelmapper.PropertyMap;
 
 public class MultiLayerMapper extends ModelMapper{
 
-	public MultiLayerMapper(List<Class<PropertyMap<?, ?>>> mappers) throws InstantiationException, IllegalAccessException {
-		for(Class<PropertyMap<?, ?>> mapper : mappers) {
-			super.addMappings(mapper.newInstance());
+	public MultiLayerMapper(List<PropertyMap<?, ?>> mappers) throws InstantiationException, IllegalAccessException {
+		for(PropertyMap<?, ?> mapper : mappers) {
+			super.addMappings(mapper);
 		}
 	}
 }

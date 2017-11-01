@@ -3,15 +3,14 @@ package com.fnmps.java.template.multilayer.beans;
 import java.io.Serializable;
 
 import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.view.ViewScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 import com.fnmps.java.template.multilayer.servicelayer.authentication.exceptions.AuthenticationException;
 import com.fnmps.java.template.multilayer.servicelayer.authentication.model.UserIn;
-import com.fnmps.java.template.multilayer.servicelayer.authentication.services.IAuthenticationService;
 
-@Named
+@ManagedBean
 @ViewScoped
 public class LoginControllerBean implements Serializable {
 
@@ -20,18 +19,18 @@ public class LoginControllerBean implements Serializable {
 	 */
 	private static final long serialVersionUID = 8207346187485566347L;
 
-	@Inject
+	@ManagedProperty("#{userBean}")
 	private UserBean userBean;
 
-	@Inject
+	@ManagedProperty("#{loginBackingBean}")
 	private LoginBackingBean loginBackingBean;
 
-	@Inject
-	private IAuthenticationService authenticationService;
+	@ManagedProperty("#{serviceCatalog}")
+	private ServiceCatalog serviceCatalog;
 
 	@PostConstruct
 	public void init() {
-		System.out.println("initing services");
+		System.out.println("initing LoginControllerBean");
 	}
 
 	public String actionLogin() {	
@@ -39,7 +38,7 @@ public class LoginControllerBean implements Serializable {
 		try {
 			UserIn user = new UserIn();
 			user.setUsername(loginBackingBean.getUsername());
-			authenticationService.authenticate(user );
+			serviceCatalog.getAuthenticationService().authenticate(user );
 		} catch (AuthenticationException e) {
 			e.printStackTrace();
 		}
@@ -64,13 +63,12 @@ public class LoginControllerBean implements Serializable {
 		this.loginBackingBean = loginBackingBean;
 	}
 
-	public IAuthenticationService getAuthenticationService() {
-		return authenticationService;
+	public ServiceCatalog getServiceCatalog() {
+		return serviceCatalog;
 	}
 
-	public void setAuthenticationService(IAuthenticationService authenticationService) {
-		this.authenticationService = authenticationService;
+	public void setServiceCatalog(ServiceCatalog serviceCatalog) {
+		this.serviceCatalog = serviceCatalog;
 	}
-
 
 }

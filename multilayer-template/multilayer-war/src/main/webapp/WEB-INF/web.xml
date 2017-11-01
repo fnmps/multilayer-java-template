@@ -6,7 +6,7 @@
 	<display-name>Multilayer template application</display-name>
 
 	<welcome-file-list>
-		<welcome-file>index.xhtml</welcome-file>
+		<welcome-file>pages/index.xhtml</welcome-file>
 	</welcome-file-list>
 
 	<servlet>
@@ -28,15 +28,13 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
-	<servlet-mapping>
-		<servlet-name>spring-web</servlet-name>
-		<url-pattern>/</url-pattern>
-	</servlet-mapping>
-
-
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:applicationContext.xml</param-value>
+		<param-value>
+		classpath:businessContext.xml
+		classpath:servicesContext.xml
+		classpath:presentationContext.xml
+		</param-value>
 	</context-param>
 
 	<listener>
