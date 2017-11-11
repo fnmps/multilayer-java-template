@@ -1,9 +1,9 @@
-package com.fnmps.java.template.multilayer.servicelayer.authentication.model;
+package com.fnmps.java.template.multilayer.servicelayer.relationships.model;
 
-public class UserIn {
+public class UserRelationshipsIn {
 
 	private String username;
-
+	
 	public String getUsername() {
 		return username;
 	}
@@ -11,5 +11,5 @@ public class UserIn {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-
+	
 }

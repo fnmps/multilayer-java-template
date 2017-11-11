@@ -11,6 +11,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<cxf.version>3.2.1</cxf.version>
 	</properties>
 
 	<modules>
@@ -63,6 +64,27 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-webmvc</artifactId>
 				<version>5.0.1.RELEASE</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-core</artifactId>
+				<version>${cxf.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-transports-http</artifactId>
+				<version>${cxf.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-bindings-soap</artifactId>
+				<version>${cxf.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-frontend-jaxws</artifactId>
+				<version>${cxf.version}</version>
 			</dependency>
 
 

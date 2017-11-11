@@ -5,7 +5,16 @@
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<import resource="classpath:authenticationContext.xml" />
-	<import resource="classpath:relationshipsContext.xml" />
+	<context:component-scan base-package="com.fnmps.java.template.multilayer.businesslayer.relationships.services"></context:component-scan>
+
+	<bean id="relationshipsFacade" class="com.fnmps.java.template.multilayer.businesslayer.relationships.RelationshipsFacade"></bean>
+
+	<bean id="relationshipsMapper" class="com.fnmps.java.template.multilayer.util.MultiLayerMapper">
+		<constructor-arg>
+			<list>
+			</list>
+		</constructor-arg>
+	</bean>
+
 
 </beans>
