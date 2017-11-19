@@ -7,10 +7,13 @@
         <dependent-module archiveName="multilayer-dataaccesslayer-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/multilayer-dataaccesslayer/multilayer-dataaccesslayer">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="multilayer-businesslayer-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/multilayer-businesslayer/multilayer-businesslayer">
+        <dependent-module archiveName="multilayer-businesslayer-authentication-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/multilayer-businesslayer-authentication/multilayer-businesslayer-authentication">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="multilayer-util-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/multilayer-util/multilayer-util">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="multilayer-businesslayer-relationships-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/multilayer-businesslayer-relationships/multilayer-businesslayer-relationships">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="multilayer-servicelayer-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/multilayer-servicelayer/multilayer-servicelayer">
@@ -22,7 +25,7 @@
         <dependent-module deploy-path="/" handle="module:/overlay/slf/?includes=**/**&amp;excludes=META-INF/MANIFEST.MF">
             <dependency-type>consumes</dependency-type>
         </dependent-module>
-        <dependent-module deploy-path="/" handle="module:/overlay/prj/multilayer-presentationlayer?includes=pages/*;WEB-INF/faces-config.xml;WEB-INF/spring-web-servlet.xml&amp;excludes=META-INF/MANIFEST.MF">
+        <dependent-module deploy-path="/" handle="module:/overlay/prj/multilayer-presentationlayer?includes=pages/**;WEB-INF/**&amp;excludes=META-INF/MANIFEST.MF">
             <dependency-type>consumes</dependency-type>
         </dependent-module>
         <property name="context-root" value="multilayer-war"/>

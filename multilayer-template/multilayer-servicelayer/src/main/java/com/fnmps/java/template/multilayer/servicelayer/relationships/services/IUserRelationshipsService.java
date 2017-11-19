@@ -3,12 +3,12 @@ package com.fnmps.java.template.multilayer.servicelayer.relationships.services;
 import org.springframework.stereotype.Service;
 
 import com.fnmps.java.template.multilayer.servicelayer.relationships.exceptions.RelationshipsException;
-import com.fnmps.java.template.multilayer.servicelayer.relationships.model.UserRelationshipsIn;
-import com.fnmps.java.template.multilayer.servicelayer.relationships.model.UserRelationshipsOut;
+import com.fnmps.java.template.multilayer.servicelayer.relationships.model.GetAllFriendsIn;
+import com.fnmps.java.template.multilayer.servicelayer.relationships.model.GetAllFriendsOut;
 
 @Service
 public interface IUserRelationshipsService {
 
-	UserRelationshipsOut getUserRelationships(UserRelationshipsIn user) throws RelationshipsException;
+	GetAllFriendsOut getAllFriends(GetAllFriendsIn input) throws RelationshipsException;
 	
 }

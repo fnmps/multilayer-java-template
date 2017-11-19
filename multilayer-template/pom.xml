@@ -16,11 +16,12 @@
 
 	<modules>
 		<module>multilayer-util</module>
-		<module>multilayer-businesslayer</module>
 		<module>multilayer-servicelayer</module>
 		<module>multilayer-war</module>
 		<module>multilayer-presentationlayer</module>
 		<module>multilayer-dataaccesslayer</module>
+		<module>multilayer-businesslayer-authentication</module>
+		<module>multilayer-businesslayer-relationships</module>
 	</modules>
 
 	<build>

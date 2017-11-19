@@ -20,7 +20,12 @@
 		</dependency>
 		<dependency>
 			<groupId>com.fnmps.java.template</groupId>
-			<artifactId>multilayer-businesslayer</artifactId>
+			<artifactId>multilayer-businesslayer-authentication</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fnmps.java.template</groupId>
+			<artifactId>multilayer-businesslayer-relationships</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
@@ -75,8 +80,6 @@
 	</dependencies>
 	<packaging>war</packaging>
 
-
-
 	<build>
 		<plugins>
 			<plugin>
@@ -91,10 +94,9 @@
 							<type>jar</type>
 							<includes>
 								<!-- web pages -->
-								<include>pages/*</include>
+								<include>pages/**</include>
 								<!-- configuration files -->
-								<include>WEB-INF/faces-config.xml</include>
-								<include>WEB-INF/spring-web-servlet.xml</include>
+								<include>WEB-INF/**</include>
 							</includes>
 						</overlay>
 						<overlay>
