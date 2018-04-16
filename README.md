@@ -1,14 +1,14 @@
 # multilayer-java-template
 An example of a maven project following a multilayer architecture.
 
-![Alt text](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/multilayer.png)
+![](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/multilayer.png)
 
 A multilayered architecture is a client–server architecture in which presentation, application processing, and data management functions are conceptually separated.
 
 By segregating an application into layers, developers acquire the option of modifying or adding functionality to a specific layer, instead of reworking the entire application.
 
 
-![Alt text](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/presentationlayer.png)
+![](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/presentationlayer.png)
 
 This is the topmost level of the application.
 
@@ -21,7 +21,7 @@ In simple terms, it is a layer which users can access directly.
 A typical pattern used on this layer is the model-view-controller.
 
 
-![Alt text](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/mvc.png)
+![](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/mvc.png)
 
 Model-View-Controller (MVC)
 The MVC software design pattern has as main objective to be able to easily separate the responsibilities of each part of the design.
@@ -34,7 +34,7 @@ The View: Responsible for the output representation of the application. Usually 
 The Controller: Processes the requests from the user and reacts accordingly. Beside being responsible for the UI logic of the application (when and what is shown to the user) it calls the services exposed by the lower layer mapping the model into the objects that are accepted by the service layer. 
 
 
-![Alt text](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/servicelayer.png)
+![](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/servicelayer.png)
 
 The service layer abstracts the business functions, hiding the implementation details of the business layer.
 
@@ -44,14 +44,14 @@ Usually only composed by lightweight classes and interfaces that are needed for 
 
 
 
-![Alt text](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/servicelayer-flow.png)
+![](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/servicelayer-flow.png)
 
 This layer define functionalities that should be exposed as interfaces – for the presentation layer of the application – or as web services – for any external application that wants to communicate with our application.
 
 The service layer has no knowledge of the outside layers. It only defines the contract that the business layer will implement and that is visible to the presentation layer or external applications.
 
 
-![Alt text](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/servicelayer-content.png)
+![](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/servicelayer-content.png)
 
 A service is usually only composed of 3 parts: the model, the exceptions, and the interface.
 
@@ -61,7 +61,7 @@ The model consists of the various classes that the interface receives and output
 
 The exceptions, much like the model, consist of the various exceptions that each function can throw.
 
-![Alt text](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/businesslayer.png)
+![](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/businesslayer.png)
 
 
 This layer implements the core functionality of the system, and encapsulates the relevant business logic and rules of the application.
@@ -69,7 +69,7 @@ This layer implements the core functionality of the system, and encapsulates the
 Prescribes how business objects interact with one another and enforces the routes and the methods by which business objects are accessed and updated.
 
 
-![Alt text](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/businesslayer-flow.png)
+![](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/businesslayer-flow.png)
 
 Usually on the business layer we use the façade pattern.
 
@@ -80,7 +80,7 @@ It maps the input and output defined on the contract and redirects the call to t
 The business functions do not care if the caller is a web service or a plain interface, it’s the responsibility of the façade to abstract it.
 
 
-![Alt text](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/dataaccesslayer.png)
+![](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/dataaccesslayer.png)
 
 The Data access layer provides simplified access to data stored in persistent storage.
 
@@ -90,7 +90,7 @@ On this layer a single method can translate into multiple instructions that the 
 
 
 
-![Alt text](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/dataaccesslayer-flow.png)
+![](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/dataaccesslayer-flow.png)
 
 The business layer is conscious of the entities and repositories that exist on the data access layer. 
 
