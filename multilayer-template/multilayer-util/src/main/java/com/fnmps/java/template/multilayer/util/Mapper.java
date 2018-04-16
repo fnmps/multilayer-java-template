@@ -15,15 +15,6 @@ public abstract class Mapper<T1, T2> {
 				.getActualTypeArguments()[1];
 	}
 
-	public T2 map(T1 source, Class<T2> destinationClass) {
-		try {
-			return map(source, destinationClass.newInstance());
-		} catch (InstantiationException | IllegalAccessException e ) {
-			e.printStackTrace();
-			return null;
-		}
-	}
-	
 	public abstract T2 map(T1 source, T2 destination);
 
 	public Class<T1> getSourceType() {
