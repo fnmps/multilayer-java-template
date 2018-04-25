@@ -66,18 +66,37 @@ The exceptions, much like the model, consist of the various exceptions that each
 
 This layer implements the core functionality of the system, and encapsulates the relevant business logic and rules of the application.
 
-Prescribes how business objects interact with one another and enforces the routes and the methods by which business objects are accessed and updated.
+It also prescribes how business objects interact with one another and enforces the routes and the methods by which business objects are accessed and updated.
 
 
 ![](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/businesslayer-flow.png)
 
 Usually on the business layer we use the façade pattern.
 
-The façade is responsible for implementing the contracts defined on the service layer.
+The façade is responsible for implementing the contracts defined on the service layer
 
-It maps the input and output defined on the contract and redirects the call to the proper business function that covers the business logic/rule for that call.
+The façade does not implement business logic. It simple maps the service input and output and calls  proper business functions that cover the business logic/rule for that call.
 
-The business functions do not care if the caller is a web service or a plain interface, it’s the responsibility of the façade to abstract it.
+![](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/businesslayer-modules.png)
+
+The business functions do not care if the caller is a web service or a plain interface, it’s the responsibility of the façade to abstract it. (i.e., business functions are not aware of the model/exceptions/interface of the service layer)
+
+A lot of times the business layer is divided into multiple modules, different business components, different modules. 
+On these cases each module would then have its own façade and business functions.
+
+![](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/businesslayer-adapters.png)
+
+Sometimes business function requires the call of functions outside of their module.
+
+For this, we use adapters.
+
+This adapters are similar to the façade. They map the input/output of the function/service and business objects.
+
+An adapter should also supply to the business functions an appropriate abstraction of the service/function being called.
+
+Example, supposed there is a service that provides all the information about a user (getUserData), however, the business rules only require a piece of that information (e.g., the birthdate of the user).
+
+The adapter should then provide a function getNameOfUser that will call getUserData, but only returns the appropriate data to the business function.
 
 
 ![](https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/dataaccesslayer.png)
