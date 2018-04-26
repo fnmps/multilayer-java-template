@@ -7,13 +7,19 @@
 		<artifactId>multilayer</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>multilayer-businesslayer-relationships</artifactId>
+	<artifactId>multilayer-businesslayer-relationships-adapters</artifactId>
 
 	<dependencies>
 	
 		<dependency>
 			<groupId>com.fnmps.java.template</groupId>
 			<artifactId>multilayer-businesslayer-model</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.fnmps.java.template</groupId>
+			<artifactId>multilayer-servicelayer-authentication</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		

@@ -5,10 +5,10 @@
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<import resource="classpath:*ServiceContext.xml" />
+	<import resource="classpath:*BusinessContext.xml" />
+	<import resource="classpath:*AdaptersContext.xml" />
 	<import resource="classpath:dataContext.xml" />
-	<import resource="classpath:servicesContext.xml" />
-	<import resource="classpath:authenticationBusinessContext.xml" />
-	<import resource="classpath:relationshipsBusinessContext.xml" />
 	<import resource="classpath:presentationContext.xml" />
-
+	
 </beans>

@@ -16,12 +16,17 @@
 
 	<modules>
 		<module>multilayer-util</module>
-		<module>multilayer-servicelayer</module>
-		<module>multilayer-war</module>
+		<module>multilayer-servicelayer-relationships</module>
+		<module>multilayer-servicelayer-authentication</module>
 		<module>multilayer-presentationlayer</module>
 		<module>multilayer-dataaccesslayer</module>
+		<module>multilayer-businesslayer-model</module>
+		<module>multilayer-businesslayer-relationships-adapters</module>
 		<module>multilayer-businesslayer-authentication</module>
 		<module>multilayer-businesslayer-relationships</module>
+		<module>multilayer-businesslayer-authentication-facade</module>
+		<module>multilayer-businesslayer-relationships-facade</module>
+		<module>multilayer-war</module>
 	</modules>
 
 	<build>
@@ -87,7 +92,6 @@
 				<artifactId>cxf-rt-frontend-jaxws</artifactId>
 				<version>${cxf.version}</version>
 			</dependency>
-
 
 		</dependencies>
 	</dependencyManagement>

@@ -3,13 +3,13 @@ package com.fnmps.java.template.multilayer.businesslayer.relationships.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.fnmps.java.template.multilayer.businesslayer.authentication.exceptions.UserNotFoundException;
 import com.fnmps.java.template.multilayer.businesslayer.relationships.model.User;
 import com.fnmps.java.template.multilayer.dataaccesslayer.entities.UserEntity;
 import com.fnmps.java.template.multilayer.dataaccesslayer.repositories.UserRepository;
-import com.fnmps.java.template.multilayer.servicelayer.authentication.exceptions.UserNotFoundException;
 
 @Component
-public class RelationshipsService {
+public class RelationshipsService implements IRelationshipsService {
 
 	@Autowired
 	private UserRepository userRepository;
