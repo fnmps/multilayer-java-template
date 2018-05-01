@@ -4,7 +4,7 @@ An example of a maven project following a multilayer architecture.
 *Note that this application is simply a mock to exemplify the use of each layer and how to separate each layer using maven project dependencies.
 It should not be considered as an actual application.
 
-<img src="https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/example-architecture.png" width="450"/>
+<img src="https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/example-architecture.png"/>
 
 This example is a simple functional application that shows relationships between different users.
 
@@ -15,7 +15,7 @@ The authentication module of the application provides the way a user might be au
 The relationships module of the application provides the services that allow to fetch/add/update/remove relationships between users.
 
 
-<img src="https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/example-architecture-dependencies.png" width="450"/>
+<img src="https://github.com/fnmps/multilayer-java-template/blob/master/multilayer-template/Documentation/images/example-architecture-dependencies.png" />
 
 
 ### Data Access Layer
